@@ -1,5 +1,25 @@
 .slider {
   position: relative;
+  height: 256px;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+  }
+}
+
+
+.slider__image-before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+.slider__image-after {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .slider__button {
@@ -11,6 +31,8 @@
   position: absolute;
   top: 0;
   left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1;
 
   &:hover {
     background-color: #68b738;
@@ -48,8 +70,9 @@
     height: 40px;
     width: 40px;
     top: 50%;
-    left: 2px;
+    left: 0;
     transform: translate(-50%, -50%);
+    z-index: 1;
   }
 
   &::after {
@@ -62,8 +85,8 @@
     width: 24px;
     height: 18px;
     top: 50%;
-    left: 2px;
+    left: 0;
     transform: translate(-50%, -50%);
+    z-index: 1;
   }
 }
-
