@@ -1,1 +1,58 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $content-font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  background-color: $background-color;
+}
+
+img {
+  display: block;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+dt,
+dd {
+  margin: 0;
+}
+//viewports
+$mobile-width-only: 768px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+$mobile-width-only: 767px;

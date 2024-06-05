@@ -1,0 +1,37 @@
+.copyright__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-width: 280px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    min-width: 168px;
+  }
+}
+
+.copyright__text {
+  font-family: $content-font;
+  color: #444444;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+
+.copyright__link-icon {
+  color: #666666;
+}
+
+.copyright__link:hover .copyright__link-icon {
+  color: #68b738;
+}
+
+.copyright__link:active .copyright__link-icon {
+  color: #68b738;
+  opacity: 0.3;
+}
+
+.copyright__link:active .copyright__text {
+  opacity: 0.3;
+}
