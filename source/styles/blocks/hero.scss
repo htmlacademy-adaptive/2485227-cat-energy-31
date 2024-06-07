@@ -3,9 +3,6 @@
   margin: 0 auto;
   color: #ffffff;
 
-  background-image: image-set("../images/hungry-cat-mobile@1x.webp" 1x, "../images/hungry-cat-mobile@2x.webp" 2x, "../images/hungry-cat-mobile@1x.jpg" 1x, "../images/hungry-cat-mobile@2x.jpg" 2x);
-  background-repeat: no-repeat;
-  background-size: 320px, 302px;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -38,7 +35,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 28px;
+  position: relative;
+
 
   @media (min-width: $tablet-width) {
     padding-top: 65px;
@@ -57,19 +55,34 @@
   }
 }
 
+.hero__content-wrapper {
+  @media (max-width: $mobile-width-only) {
+    background-color: #62a53a;
+    max-width: 320px;
+    padding: 27px 35px 150px;
+    margin: 0 0 180px;
+    background-image: image-set("../images/hungry-cat-mobile@1x.webp" 1x, "../images/hungry-cat-mobile@2x.webp" 2x, "../images/hungry-cat-mobile@1x.jpg" 1x, "../images/hungry-cat-mobile@2x.jpg" 2x);
+    background-repeat: no-repeat;
+    background-size: 320px, 302px;
+    min-height: 300px;
+  }
+}
+
+
 .hero__header {
   text-align: center;
   position: relative;
 
+
   @media (min-width: $tablet-width) {
     text-align: left;
-    max-width: 544px;
+    max-width: 440px;
     margin-bottom: 40px;
-    padding-left: 120px;
+    margin-left: 120px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 0;
+    margin-left: 0;
   }
 }
 
@@ -80,7 +93,7 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
-  padding: 25px 35px 31px 36px;
+  padding: 25px 0 0;
 
 
   @media (min-width: $tablet-width) {
@@ -93,16 +106,22 @@
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 414px;
     padding: 0;
+    margin-bottom: 30px;
   }
 }
 
+
 .hero__button {
-  min-width: 280px;
+  width: 280px;
   min-height: 40px;
   font-size: 16px;
   line-height: 20px;
   padding: 9px 10px 10px;
+  position: absolute;
+  bottom: 0;
+  left: 20px;
 
 
   @media (min-width: $tablet-width) {
@@ -110,20 +129,27 @@
     min-height: 54px;
     font-size: 20px;
     line-height: 26px;
-    position: absolute;
-    top: 295px;
-    left: 120px;
+    position: static;
+    margin-left: 120px;
   }
 
   @media (min-width: $desktop-width) {
-    top: 340px;
-    left: 190px;
+    max-width: 440px;
+    margin-left: 0;
   }
 }
 
 .hero__image {
-  @media (min-width: $tablet-width) {
+  @media (max-width: $mobile-width-only) {
 
+    position: absolute;
+    left: 20px;
+    bottom: 42px;
+  }
+
+
+  @media (min-width: $tablet-width) {
+    position: static;
     margin-left: 30px;
   }
 
