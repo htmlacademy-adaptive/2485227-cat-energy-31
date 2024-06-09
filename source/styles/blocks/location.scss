@@ -108,13 +108,13 @@
       width: 113px;
       height: 106px;
       top: 145px;
-      left: 50vw;
+      left: 50%;
       translate: (-45% 0);
     }
 
     @media (min-width: $desktop-width) {
       top: 125px;
-      left: 67vw;
+      left: 67%;
       translate: (-50% 0);
     }
   }

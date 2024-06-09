@@ -48,6 +48,8 @@
   grid-area: product-card-title;
   min-height: 41px;
   max-width: 76px;
+  margin: 0;
+  padding: 0;
 
   @media (min-width: $tablet-width) {
     max-width: 135px;
@@ -84,6 +86,9 @@
 }
 
 .product-card__characteristics {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   grid-area: product-characteristics;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;

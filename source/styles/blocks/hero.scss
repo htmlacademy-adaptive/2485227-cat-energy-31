@@ -1,20 +1,35 @@
 .hero {
-  width: 320px;
-  margin: 0 auto;
   color: #ffffff;
+  width: 320px;
 
-  background-image: image-set("../images/hungry-cat-mobile@1x.webp" 1x, "../images/hungry-cat-mobile@2x.webp" 2x, "../images/hungry-cat-mobile@1x.jpg" 1x, "../images/hungry-cat-mobile@2x.jpg" 2x);
-  background-repeat: no-repeat;
-  background-size: 320px, 302px;
+  @media (max-width: $mobile-width-only) {
+    background-color: #62a53a;
+    padding: 27px 35px 150px;
+    margin: 0 0 180px;
+    background-image: image-set("../images/hungry-cat-mobile@1x.webp" 1x, "../images/hungry-cat-mobile@2x.webp" 2x, "../images/hungry-cat-mobile@1x.jpg" 1x, "../images/hungry-cat-mobile@2x.jpg" 2x);
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: 320px, 302px;
+    min-height: 300px;
+    min-width: 100%;
+  }
 
   @media (min-width: $tablet-width) {
-    width: 768px;
+    width: 100%;
     color: #000000;
     background-image: none;
+    padding: 0 0 150px;
+    margin: 0 0 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (min-width: $desktop-width) {
-    width: 1440px;
+    min-width: 100%;
+    max-width: 1440px;
+    margin: 0;
+    padding: 0;
 
     color: #000000;
     min-height: 580px;
@@ -38,7 +53,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 28px;
+  position: relative;
+
 
   @media (min-width: $tablet-width) {
     padding-top: 65px;
@@ -50,26 +66,48 @@
 
   @media (min-width: $desktop-width) {
 
-    width: 919px;
+    width: 1220px;
     min-height: 580px;
-    padding-left: 190px;
     padding-top: 110px;
+    padding-left: 83px;
   }
 }
 
-.hero__header {
-  text-align: center;
+.hero__content-wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
-    text-align: left;
-    max-width: 544px;
-    margin-bottom: 40px;
-    padding-left: 120px;
+    padding: 0 0 21px 120px;
+    align-items: flex-start;
+    max-width: 768px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 0;
+    padding: 0;
+    align-items: flex-start;
+    max-width: 768px;
+  }
+}
+
+
+.hero__header {
+  margin: 0 0 25px;
+  text-align: center;
+  position: relative;
+  max-width: 280px;
+
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    max-width: 440px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
   }
 }
 
@@ -80,22 +118,26 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
-  padding: 25px 35px 31px 36px;
+  padding: 0;
+  max-width: 280px;
+  margin: 0;
 
 
   @media (min-width: $tablet-width) {
     text-align: left;
     font-size: 20px;
     line-height: 1em;
-    padding: 0 0 21px 120px;
-    max-width: 510px;
-    margin: 0;
+    max-width: 440px;
+    margin: 0 0 50px;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 414px;
     padding: 0;
+    margin-bottom: 50px;
   }
 }
+
 
 .hero__button {
   min-width: 280px;
@@ -103,6 +145,8 @@
   font-size: 16px;
   line-height: 20px;
   padding: 9px 10px 10px;
+  position: absolute;
+  bottom: -340px;
 
 
   @media (min-width: $tablet-width) {
@@ -110,27 +154,37 @@
     min-height: 54px;
     font-size: 20px;
     line-height: 26px;
-    position: absolute;
-    top: 295px;
-    left: 120px;
+    position: static;
+    padding: 13px 10px 10px;
+    z-index: 1;
   }
 
   @media (min-width: $desktop-width) {
-    top: 340px;
-    left: 190px;
+    max-width: 440px;
+    margin-left: 0;
   }
 }
 
 .hero__image {
-  @media (min-width: $tablet-width) {
+  @media (max-width: $mobile-width-only) {
+    position: absolute;
+    bottom: -300px;
+    left: 50%;
+    translate: (-50% 0);
+  }
 
-    margin-left: 30px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: -505px;
+    left: 50%;
+    translate: (-50% 0);
   }
 
   @media (min-width: $desktop-width) {
     position: absolute;
     top: 29px;
-    left: 560px;
+    left: 730px;
     margin: 0;
   }
 }
