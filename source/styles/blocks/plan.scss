@@ -193,13 +193,35 @@
     position: absolute;
     background-image: url("../../icons/stack.svg#arrow-icon");
     width: 24px;
-    height: 12px;
+    height: 10px;
+    background-size: 24px 10px;
+    background-repeat: no-repeat;
     top: 50%;
     translate: 0 -50%;
-    right: 0;
+    right: -12px;
+
 
     @media (max-width: $mobile-width-only) {
       top: 78%;
+    }
+  }
+
+  &:hover {
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../../icons/stack.svg#arrow-long-icon");
+      width: 32px;
+      height: 10px;
+      background-size: 32px 10px;
+      background-repeat: no-repeat;
+      top: 50%;
+      translate: 0 -50%;
+      right: -8px;
+
+      @media (max-width: $mobile-width-only) {
+        top: 78%;
+      }
     }
   }
 
@@ -209,9 +231,28 @@
     line-height: 30px;
     color: #000000;
     background-position: 129px;
+    padding-top: 0;
   }
+
 
   &:active {
     opacity: 0.3;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url("../../icons/stack.svg#arrow-long-icon");
+      width: 32px;
+      height: 10px;
+      background-size: 32px 10px;
+      background-repeat: no-repeat;
+      top: 50%;
+      translate: 0 -50%;
+      right: -8px;
+
+      @media (max-width: $mobile-width-only) {
+        top: 78%;
+      }
+    }
   }
 }

@@ -4,22 +4,35 @@
 
   @media (min-width: $tablet-width) {
     width: 560px;
-    height: 512px;
+    height: 515px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+    height: 515px;
   }
 }
 
 
 .slider__image-before {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
+
+  @media (min-width: $desktop-width) {
+    bottom: 10px;
+  }
 }
 
 
 .slider__image-after {
   position: absolute;
-  top: 0;
+  bottom: 0;
   right: 0;
+
+  @media (min-width: $desktop-width) {
+    bottom: 10px;
+  }
 }
 
 .slider__button {
@@ -29,10 +42,14 @@
   width: 4px;
   height: 100%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1;
+
+  @media (min-width: $desktop-width) {
+    bottom: 10px;
+  }
 
   &:hover {
     background-color: #68b738;
@@ -69,7 +86,7 @@
     border-radius: 50%;
     height: 40px;
     width: 40px;
-    top: 50%;
+    top: 51%;
     left: 0;
     transform: translate(-50%, -50%);
     z-index: 1;
