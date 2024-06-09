@@ -67,6 +67,7 @@
   }
 }
 
+
 .main-nav--opened {
   @media (max-width: $mobile-width-only) {
     .main-nav__open-button::after {
@@ -225,4 +226,8 @@
       left: 0;
     }
   }
+}
+
+.main-nav--catalog {
+  color: #111111;
 }
