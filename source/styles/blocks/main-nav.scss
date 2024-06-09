@@ -23,7 +23,7 @@
     width: 24px;
     height: 24px;
 
-    &::before {
+    &::after {
       content: "";
       position: absolute;
       width: 24px;
@@ -69,11 +69,11 @@
 
 .main-nav--opened {
   @media (max-width: $mobile-width-only) {
-    .main-nav__open-button {
+    .main-nav__open-button::after {
       display: none;
     }
 
-    .main-nav__close-button {
+    .main-nav__close-button::before {
       display: block;
     }
   }
@@ -85,11 +85,11 @@
       display: none;
     }
 
-    .main-nav__open-button {
+    .main-nav__open-button::after {
       display: block;
     }
 
-    .main-nav__close-button {
+    .main-nav__close-button::before {
       display: none;
     }
   }
@@ -97,11 +97,11 @@
 
 .main-nav--nojs {
   @media (max-width: $mobile-width-only) {
-    .main-nav__open-button {
+    .main-nav__open-button::after {
       display: none;
     }
 
-    .main-nav__close-button {
+    .main-nav__close-button::before {
       display: none;
     }
 
