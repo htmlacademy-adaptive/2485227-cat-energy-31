@@ -1,3 +1,5 @@
+
+
 .main-nav__close-button {
   @media (max-width: $mobile-width-only) {
     position: relative;
@@ -51,19 +53,22 @@
 
 .main-nav {
   @media (max-width: $mobile-width-only) {
-    width: 24px;
+    min-width: 24px;
+    margin-right: 20px;
   }
 
 
   @media (min-width: $tablet-width) {
     min-width: 436px;
     margin-left: auto;
+    max-width: 45%;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
     min-width: 475px;
+    max-width: 45%;
   }
 }
 
@@ -96,22 +101,6 @@
   }
 }
 
-.main-nav--nojs {
-  @media (max-width: $mobile-width-only) {
-    .main-nav__open-button::after {
-      display: none;
-    }
-
-    .main-nav__close-button::before {
-      display: none;
-    }
-
-    .main-nav {
-      position: static;
-    }
-  }
-}
-
 .main-nav__wrapper {
   @media (max-width: $mobile-width-only) {
     position: absolute;
@@ -120,6 +109,22 @@
     background-color: #ffffff;
     min-width: 100%;
     z-index: 1;
+  }
+}
+
+.main-nav--nojs {
+  @media (max-width: $mobile-width-only) {
+    .main-nav__toggle {
+      display: none;
+    }
+
+    margin: 0;
+    width: 100%;
+
+
+    .main-nav__wrapper {
+      position: static;
+    }
   }
 }
 
